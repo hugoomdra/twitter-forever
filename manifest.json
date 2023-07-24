@@ -3,24 +3,10 @@
     "manifest_version": 3,
     "name": "Twitter Forever",
     "version": "1.0.0",
-
     "description": "Replace the X logo by the blue bird",
-
     "icons": {
         "48": "twitter-icon.png"
     },
-
-    "background": {
-        "service_worker": "background.js"
-    },
-
-    "permissions": [
-        "storage",
-        "tabs",
-        "scripting",
-        "windows"
-    ],
-
     "content_scripts": [
         {
             "matches": ["https://twitter.com/*", "https://www.twitter.com/*"],
@@ -28,11 +14,6 @@
             "run_at": "document_start"
         }
     ],
-
-    "host_permissions": [
-        "https://*/*"
-    ],
-
     "web_accessible_resources": [
         {
             "resources": ["twitter-icon.png"],
